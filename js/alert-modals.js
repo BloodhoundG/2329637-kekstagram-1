@@ -33,15 +33,7 @@ export const showErrorDownload = (message) => {
   errorDownload.addEventListener('click', closeErrorDownload);
 };
 
-export const templateMessageSuccessModal = document
-  .querySelector('#success')
-  .content
-  .querySelector('.success');
 
-export const templateMessageErrorModal = document
-  .querySelector('#error')
-  .content
-  .querySelector('.error');
 /**
  * Функция отображения модального окна с ошибкой/успехом отправки данных на сервер
  * @param template

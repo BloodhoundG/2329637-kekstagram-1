@@ -3,7 +3,7 @@ import {initEffectSlider, resetSlider} from './effect-slider.js';
 import {resetForm, validateForm} from './validate.js';
 import {sendData} from './api.js';
 import {addEscHandler, removeEscHandler} from './escape-press-handler.js';
-import {showMessageModal, templateMessageSuccessModal, templateMessageErrorModal} from './alert-modals.js';
+import {showMessageModal} from './alert-modals.js';
 import {showDownloadImage} from './preview-image.js';
 
 const effectValue = document.querySelector('.effect-level__value');
@@ -12,6 +12,15 @@ const uploadForm = imgUpload.querySelector('#upload-select-image');
 const uploadFile = imgUpload.querySelector('#upload-file');
 const uploadCloseButton = imgUpload.querySelector('#upload-cancel');
 const overlay = imgUpload.querySelector('.img-upload__overlay');
+const templateMessageSuccessModal = document
+  .querySelector('#success')
+  .content
+  .querySelector('.success');
+
+const templateMessageErrorModal = document
+  .querySelector('#error')
+  .content
+  .querySelector('.error');
 
 /**
  * Функция закрывает модальное окно при клике на элемене с идентификатором '#upload-cancel'
